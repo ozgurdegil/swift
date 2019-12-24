@@ -1,0 +1,12 @@
+class a{
+  var x = 87878
+  var y = 454545
+  var topla:Int{
+    get{
+      return x + y 
+    }
+  }
+}
+
+var n = a()
+print(n.topla)
