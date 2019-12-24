@@ -1,0 +1,7 @@
+func isimyaz() -> String{
+  let isim = "Özgür Atik"
+  return isim
+}
+
+var calistir = isimyaz()
+print(calistir)
