@@ -1,0 +1,59 @@
+class Kategoriler
+{
+  var kategoriid:Int?
+  var kategoriad:String?
+
+  init(kategoriid:Int,kategoriad:String)
+  {
+    self.kategoriid = kategoriid
+    self.kategoriad = kategoriad
+  }
+}
+
+class Yonetmenler
+{
+  var yonetmenid: Int?
+  var yonetmenad: String?
+  
+  init(yonetmenid:Int,yonetmenad:String)
+  {
+    self.yonetmenid = yonetmenid
+    self.yonetmenad = yonetmenad
+  }
+}
+
+class Film
+{
+  var filmid : Int?
+  var filmad : String?
+  var filmyil : Int?
+  var ka : Kategoriler?
+  var ya : Yonetmenler?
+
+  init(filmid:Int,filmad:String,filmyil:Int,ka:Kategoriler,ya:Yonetmenler)
+  {
+    self.filmid = filmid
+    self.filmad = filmad
+    self.filmyil = filmyil
+    self.ka = ka
+    self.ya = ya
+  }
+}
+
+var k1 = Kategoriler(kategoriid: 1 , kategoriad: "Film1")
+var k2 = Kategoriler(kategoriid: 2 , kategoriad: "Film2")
+var k3 = Kategoriler(kategoriid: 3 , kategoriad: "Film3")
+
+var y1 = Yonetmenler(yonetmenid: 1 , yonetmenad: "Yönetmen1")
+var y2 = Yonetmenler(yonetmenid: 2 , yonetmenad: "Yönetmen2")
+var y3 = Yonetmenler(yonetmenid: 3 , yonetmenad: "Yönetmen3")
+
+var f1 = Film(filmid: 1,filmad: "A",filmyil: 2001,ka: k1,ya: y1)
+var f2 = Film(filmid: 2,filmad: "B",filmyil: 2002,ka: k2,ya: y2)
+var f3 = Film(filmid: 3,filmad: "C",filmyil: 2003,ka: k3,ya: y3)
+
+print(f1.filmid!)
+print(f1.filmad!)
+print(f1.filmyil!)
+print(f1.ka!.kategoriad!)
+print(f1.ya!.yonetmenad!)
