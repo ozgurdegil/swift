@@ -1,0 +1,35 @@
+class Ev 
+{
+  var penceresayisi:Int?
+
+  init(penceresayisi:Int)
+  {
+    self.penceresayisi = penceresayisi
+  }
+}
+
+class Saray:Ev
+{
+  var kulesayisi:Int?
+  
+  init(kulesayisi:Int,penceresayisi:Int)
+  {
+    super.init(penceresayisi:penceresayisi)
+    self.kulesayisi = kulesayisi
+  }
+}
+
+class Villa:Ev
+{
+  var garajvar: Bool?
+
+  init(garajvar:Bool, penceresayisi:Int)
+  {
+    self.garajvar = garajvar
+    super.init(penceresayisi:penceresayisi)
+  }
+}
+
+var tahm = Saray(kulesayisi:6,penceresayisi:65)
+var ohvilla = Villa(garajvar: true, penceresayisi:5)
+print(tahm.kulesayisi!)
