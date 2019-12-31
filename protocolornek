@@ -1,0 +1,23 @@
+protocol Protocol1{
+  var degisken : Int{ get set}
+
+  func metod1()
+  func metod2() -> String
+
+  
+}
+
+class Class1:Protocol1{
+  var degisken = 10
+  func metod1(){
+    print("Protokol 1 çalışıyor")
+  }
+  func metod2() -> String {
+    return "xxxx"
+  }
+}
+
+var a = Class1()
+print(a.degisken)
+a.metod1()
+print(a.metod2())
